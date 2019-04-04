@@ -17,9 +17,9 @@ image_data = open(image_path, "rb").read()
 headers    = {'Ocp-Apim-Subscription-Key': subscription_key,
               'Content-Type': 'application/octet-stream'}
 params     = {'visualFeatures': 'Categories,Description,Color'}
-#response = requests.post(
-#    analyze_url, headers=headers, params=params, data=image_data)
-#response.raise_for_status()
+response = requests.post(
+    analyze_url, headers=headers, params=params, data=image_data)
+response.raise_for_status()
 #analysis = response.json()
 #print(analysis)
 #image_caption = analysis["description"]["captions"][0]["text"].capitalize()
