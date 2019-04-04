@@ -10,8 +10,8 @@ vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0
 
 analyze_url = vision_base_url + "analyze"
 
-#image_path = "E:/Siddharth/sdcard1/jesus52.jpg"
-#
+image_path = "E:/Siddharth/sdcard1/jesus52.jpg"
+
 ## Reading the image
 #image_data = open(image_path, "rb").read()
 #headers    = {'Ocp-Apim-Subscription-Key': subscription_key,
