@@ -6,10 +6,10 @@ from io import BytesIO
 subscription_key = "57cb082c23104931a21990b593e2aa06"
 assert subscription_key
 
-#vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
-#
-#analyze_url = vision_base_url + "analyze"
-#
+vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
+
+analyze_url = vision_base_url + "analyze"
+
 #image_path = "E:/Siddharth/sdcard1/jesus52.jpg"
 #
 ## Reading the image
