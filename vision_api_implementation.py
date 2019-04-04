@@ -20,10 +20,10 @@ params     = {'visualFeatures': 'Categories,Description,Color'}
 response = requests.post(
     analyze_url, headers=headers, params=params, data=image_data)
 response.raise_for_status()
-#analysis = response.json()
-#print(analysis)
-#image_caption = analysis["description"]["captions"][0]["text"].capitalize()
-#print(image_caption)
+analysis = response.json()
+print(analysis)
+image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+print(image_caption)
 ## Displaying the image and overlaying it with the caption.
 #image = Image.open(BytesIO(image_data))
 #plt.imshow(image)
