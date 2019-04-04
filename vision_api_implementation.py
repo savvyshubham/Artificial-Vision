@@ -12,8 +12,8 @@ analyze_url = vision_base_url + "analyze"
 
 image_path = "E:/Siddharth/sdcard1/jesus52.jpg"
 
-## Reading the image
-#image_data = open(image_path, "rb").read()
+# Reading the image
+image_data = open(image_path, "rb").read()
 #headers    = {'Ocp-Apim-Subscription-Key': subscription_key,
 #              'Content-Type': 'application/octet-stream'}
 #params     = {'visualFeatures': 'Categories,Description,Color'}
