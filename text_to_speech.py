@@ -7,7 +7,7 @@ language = "en"
 now=datetime.datetime.now()
 fn=now.strftime("C:/Users/HP/gTTS_audio_files/%Y_%m_%d_%H_%M_%S.mp3")
 
-# resultobj = gTTS(text=text, lang=language, slow=False)
+resultobj = gTTS(text=text, lang=language, slow=False)
 
-# resultobj.save(fn)
+resultobj.save(fn)
 # playsound(fn)
