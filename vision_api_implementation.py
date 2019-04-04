@@ -24,8 +24,8 @@ analysis = response.json()
 print(analysis)
 image_caption = analysis["description"]["captions"][0]["text"].capitalize()
 print(image_caption)
-## Displaying the image and overlaying it with the caption.
-#image = Image.open(BytesIO(image_data))
-#plt.imshow(image)
+#Displaying the image and overlaying it with the caption.
+image = Image.open(BytesIO(image_data))
+plt.imshow(image)
 #plt.axis("off")
 #_ = plt.title(image_caption, size="x-large", y=-0.1)
