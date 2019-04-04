@@ -1,6 +1,4 @@
 # Artificial-Vision
-About the Project:
-Overview:
 Our system uses Artificial Intelligence to help the people who are visually impaired. It aims
 to eliminate the challenges that they have to face in their day to day lives.
 It uses a camera to sense the surroundings. In order to provide the blind people hearable
