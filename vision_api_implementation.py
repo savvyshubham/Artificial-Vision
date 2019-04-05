@@ -22,7 +22,10 @@ response = requests.post(
 response.raise_for_status()
 analysis = response.json()
 print(analysis)
-image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+try:
+    image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+except:
+     image_caption = "Sorry, I am not able to understand! Please try again."
 print(image_caption)
 #Displaying the image and overlaying it with the caption.
 image = Image.open(BytesIO(image_data))
