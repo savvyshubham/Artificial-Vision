@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</head>
+    <body>
+        
+       
+    
+    <div class="container">
+        
+        <h2>Artificial Vision</h2>
+        
+       <input type="text" id="myText" value="{% static 'project_log/images/">
+        <input type="text" id="my" value="{{image_url}}" >
+        <p id="demo">H</p>
+        <p id="demo1">H</p>
+        
+         <img id="change" src="{% static 'project_log/images/2.jpg' %}" height="200">
+        
+         <img src="{% static 'project_log/images/2019_04_14_14_50_17.jpg' %}" height="200">
+        
+        <img id="myImg" src="" alt="" width="107" height="98">
+        
+        
+         <script>
+             var x = document.getElementById("myText").value;
+             var y = document.getElementById("my").value;
+                var z="' %}" 
+             //document.getElementById("myImg").alt="compman.gif";
+             //document.getElementById("change").src="{% static 'project_log/images/' %}";
+//             var a=y.concat(z);
+//             var url="{% static 'project_log/images/";
+//             var new_url=url.concat(a);
+//             var str="http://localhost:8000/"
+//             var final_url=str.concat(new_url);
+             var str1="http://localhost:8000/static/project_log/images/"
+             var final=str1.concat(y)
+             document.getElementById("change").src=final;
+             
+             //alert(new_url);
+             document.getElementById("demo").innerHTML=final;
+            
+            
+             s=document.getElementById("change").src;
+             document.getElementById("demo1").innerHTML=s;
+             
+            
+//            alert(x);
+//             alert(y);
+//             alert(x+y+z);
+//             document.getElementById("demo").innerHTML = x+y+z;
+//             var i=document.getElementById("image");
+//             i.src="1.jpg";
+            
+        </script>
+        
+         
+        <form action="" method="post">
+        {% csrf_token %}
+            
+        <input type="hidden" value="capture" name="command">
+        
+        <button class="btn btn-primary" type="submit">Click to capture</button>
+        
+        </form>
+        {% if response %}
+<!--        <input type="text" id="url" value="{% static 'project_log/images/{{image_url}}' %}">-->
+<!--        <img src="{% static 'project_log/images/{{image_url}}' %}">-->
+        
+        <h2>Generating Response and speaking</h2>
+        <h2>{{ response }}</h2>
+        <h2>{{ image_url }}</h2>
+         
+        {% endif %}
+        
+        
+                </div>
+    
+    
+    
+    </body>
+
+</html>
