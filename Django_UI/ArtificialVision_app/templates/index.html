@@ -47,7 +47,8 @@
         <input type="hidden" id="my" value="{{image_url}}" >
         
         <center> <img id="change" src="{% static 'project_log/images/2.jpg' %}" height="200"></center>
-<script>
+        
+        <script>
              
              var y = document.getElementById("my").value;
              
@@ -63,3 +64,16 @@
         </div> 
     
     </body>
+   <script>
+        
+        function time()  //executes when the page finishes loading
+{
+	setTimeout(func1, 2500);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+	
+};
+function func1()
+{
+    document.getElementById('wait').style.display="block";
+}
+        </script>
+</html>
