@@ -47,3 +47,19 @@
         <input type="hidden" id="my" value="{{image_url}}" >
         
         <center> <img id="change" src="{% static 'project_log/images/2.jpg' %}" height="200"></center>
+<script>
+             
+             var y = document.getElementById("my").value;
+             
+            
+             var str1="http://localhost:8000/static/project_log/images/"
+             var final=str1.concat(y)
+             document.getElementById("change").src=final;
+        </script>
+     
+        <center><span><p style="font-size: 20px; color: crimson;">{{ response }}</p></span></center>
+        
+         {% endif %}
+        </div> 
+    
+    </body>
