@@ -25,3 +25,25 @@
     </style>
     
 </head>
+    <body>   
+    <div class="container-fluid">
+    <div style="background-color:brown" class="jumbotron">   
+        <center><h1 style="color:aliceblue">Artificial Vision</h1>
+        <h4 style="color:blanchedalmond">( An aid to visually impaired person )</h2>
+            </center>
+      <form action="" method="post">
+        {% csrf_token %}
+            
+        <input type="hidden" value="capture" name="command">
+        <br>
+        <center><button class="btn btn-outline-warning" type="submit" onclick="time()">Click to capture</button>
+        <br><br><h6 id="wait" class="hide">...Please wait while analyzing image and generating response...</h5></center>
+        
+        </form>
+        
+        </div>
+        {% if response %}
+        
+        <input type="hidden" id="my" value="{{image_url}}" >
+        
+        <center> <img id="change" src="{% static 'project_log/images/2.jpg' %}" height="200"></center>
