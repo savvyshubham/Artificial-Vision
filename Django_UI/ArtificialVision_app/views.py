@@ -28,30 +28,30 @@ def index(request):
                     cv2.imwrite(image_path, frame)
                     response="Captured"
         
-#         subscription_key = "a5d335b6092f4f88afd056dc594f756c"
-#         assert subscription_key        
-#         vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
-#         analyze_url = vision_base_url + "analyze"
-#         # Read the image into a byte array
-#         image_data = open(image_path, "rb").read()
-#         headers    = {'Ocp-Apim-Subscription-Key': subscription_key,
-#                       'Content-Type': 'application/octet-stream'}
-#         params     = {'visualFeatures': 'Categories,Description,Color'}
-#         response = requests.post(
-#             analyze_url, headers=headers, params=params, data=image_data)
-#         response.raise_for_status()
+        subscription_key = "a5d335b6092f4f88afd056dc594f756c"
+        assert subscription_key        
+        vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
+        analyze_url = vision_base_url + "analyze"
+        # Read the image into a byte array
+        image_data = open(image_path, "rb").read()
+        headers    = {'Ocp-Apim-Subscription-Key': subscription_key,
+                      'Content-Type': 'application/octet-stream'}
+        params     = {'visualFeatures': 'Categories,Description,Color'}
+        response = requests.post(
+            analyze_url, headers=headers, params=params, data=image_data)
+        response.raise_for_status()
         
-#         analysis = response.json()
-#         print(analysis)
-#         try:
-#             image_caption = analysis["description"]["captions"][0]["text"].capitalize()
-#         except:
-#              image_caption = "Sorry, I am not able to understand! Please try again."
-#         # Display the image and overlay it with the caption.
-#         image = Image.open(BytesIO(image_data))
-#         plt.imshow(image)
-#         plt.axis("off")
-#         _ = plt.title(image_caption, size="x-large", y=-0.1)
+        analysis = response.json()
+        print(analysis)
+        try:
+            image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+        except:
+             image_caption = "Sorry, I am not able to understand! Please try again."
+        # Display the image and overlay it with the caption.
+        image = Image.open(BytesIO(image_data))
+        plt.imshow(image)
+        plt.axis("off")
+        _ = plt.title(image_caption, size="x-large", y=-0.1)
 
 
 #         language = "en"
