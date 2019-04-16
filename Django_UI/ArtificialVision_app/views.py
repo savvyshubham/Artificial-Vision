@@ -11,22 +11,22 @@ import cv2
 from django.http import HttpResponse
 
 
-# def index(request):
-#     if request.method=="POST":
-#         username=request.POST.get('command')
+def index(request):
+    if request.method=="POST":
+        username=request.POST.get('command')
         
-#         if username=="capture":
+        if username=="capture":
             
-#             cap = cv2.VideoCapture(0)
-#             if cap.isOpened():
-#                 ifcap,frame = cap.read() 
-#                 cap.release()
-#                 if ifcap and frame is not None:
-#                     now=datetime.datetime.now()                    
-#                     image_path=now.strftime("C:\\Users\\shubham\\Desktop\\ArtificialVision_project\\static\\project_log\\images\\%Y_%m_%d_%H_%M_%S.jpg")
+            cap = cv2.VideoCapture(0)
+            if cap.isOpened():
+                ifcap,frame = cap.read() 
+                cap.release()
+                if ifcap and frame is not None:
+                    now=datetime.datetime.now()                    
+                    image_path=now.strftime("C:\\Users\\shubham\\Desktop\\ArtificialVision_project\\static\\project_log\\images\\%Y_%m_%d_%H_%M_%S.jpg")
                     
-#                     cv2.imwrite(image_path, frame)
-#                     response="Captured"
+                    cv2.imwrite(image_path, frame)
+                    response="Captured"
         
 #         subscription_key = "a5d335b6092f4f88afd056dc594f756c"
 #         assert subscription_key        
