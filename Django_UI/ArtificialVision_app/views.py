@@ -54,14 +54,14 @@ def index(request):
         _ = plt.title(image_caption, size="x-large", y=-0.1)
 
 
-#         language = "en"
-#         resultobj = gTTS(text=image_caption, lang=language, slow=False)
+        language = "en"
+        resultobj = gTTS(text=image_caption, lang=language, slow=False)
 
-#         now1=datetime.datetime.now()
-#         audio_path=now1.strftime("C:/Users/shubham/Desktop/project_log/audio/%Y_%m_%d_%H_%M_%S.mp3")
-#         resultobj.save(audio_path)
-#         playsound(audio_path)
-#         response=image_caption
-#         return render(request,'index.html',{'response':response,'image_url':image_path[-23:]})
-#     return render(request,'index.html')
+        now1=datetime.datetime.now()
+        audio_path=now1.strftime("C:/Users/shubham/Desktop/project_log/audio/%Y_%m_%d_%H_%M_%S.mp3")
+        resultobj.save(audio_path)
+        playsound(audio_path)
+        response=image_caption
+        return render(request,'index.html',{'response':response,'image_url':image_path[-23:]})
+    return render(request,'index.html')
 
